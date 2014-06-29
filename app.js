@@ -3,7 +3,6 @@ var express = require("express"),
 	bodyParser = require("body-parser"),
 	session = require("express-session"),
 	path = require("path"),
-	io = require("engine.io"),
 	mongoose = require("mongoose"),
 	passport = require("passport"),
 	LocalStrategy = require("passport-local").Strategy;
@@ -38,8 +37,6 @@ var express = require("express"),
 // Create the http server
 	
 	var http = require("http").createServer(app).listen(8080);
-	
-	var socket = io.attach(http);
 
 // Catch any uncaught errors that have been thrown
 
